@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("https://wallpapercave.com/wp/yo46nFM.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.moon {
+    position: fixed;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0px -25px 8px -22px rgba(255, 255, 255, 0.7) inset,-10px -20px 25px 0px rgba(0, 0, 0, 0.3) inset, 0px -50px 40px 0px rgba(0, 0, 0, 0.4) inset;
+    animation: animate 36s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.moon::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    margin: -55px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.moon::after{
+    content: "";
+    height: 15px;
+    width: 15px;
+    margin: -40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 25px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 10px gray;
+    border-radius: 50%;
+    position: absolute;
+}
